@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de pessoas</title>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <h2 class="title">Pesquisa de usuários</h2>
+    
+    <div>
+        <form >
+            <input type="search" name="search-bar" id="search-bar">
+            <input type="submit"  value="pesquisa" id="btn-search" disabled>
+        </form>
+    </div>
+    <div>
+      <div class="people-list">
+          <h5>Usuários encontradas(<span id="countPeople"></span>)</h5>
+          <div id="tabPeoples"></div>
+      </div>
+    </div>
+    
+</body>
+</html>
