@@ -62,14 +62,17 @@ function searchPerson(){
 function renderPeopleList(char){
     const peopleFoundArray = [];
     let count = 0;
+  
     arrayPeople.forEach((person)=>{
+        let name = person.name.toLowerCase();
+        
         if(char.length>1){   
-            if(person.name.includes(char)){
+            if(name.includes(char.toLowerCase())){
               peopleFoundArray.push(person);
               ++count;
             }
         }else{
-            if(person.name.startsWith(char)){
+            if(name.includes(char.toLowerCase())){
                 peopleFoundArray.push(person);
                 ++count;
               }
@@ -93,7 +96,7 @@ function buildHtmlList(peopleFoundArray){
                 </div> 
                 <div>
                    <ul>
-                    <li>${name}, ${age}</li>
+                    <li>${name}, idade ${age}</li>
                    </ul>
                 </div>
                    
@@ -129,10 +132,10 @@ function buildSumaryHtml(countWoman,countMen,totalAge,midle){
     const html =`
             <div>
                <ul>
-                <li>${countWoman}</li>
-                <li>${countMen}</li>
-                <li>${totalAge}</li>
-                <li>${midle}</li>
+                <li>Sexo feminino ${countWoman}</li>
+                <li>Sexo masculino ${countMen}</li>
+                <li>Todas idades somadas ${totalAge}</li>
+                <li>Média das idades ${midle}</li>
                </ul>
             </div>`;
     sumaryHtml += html;
